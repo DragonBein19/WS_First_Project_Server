@@ -34,13 +34,13 @@ public class Server {
                 }
                 catch (Exception e)
                 {
-                    System.out.println("Error. Server want to be free!!!\nXML file was destroyed!!!\n" + e.getMessage());
+                    System.out.println("\nError. Server want to be free!!!\nXML file was destroyed!!!\nError: " + e.getMessage());
                 }
                 Red_Flag = false;
             }
         } catch (Exception e)   //Объект исключения который срабатывает при возникновения ошибки при работе с подключением
         {
-            System.err.println("Error. Server is not working \nIt's was destroyed by aliens\n" + e.getMessage());
+            System.err.println("\nError. Server is not working \nIt's was destroyed by aliens\nError: " + e.getMessage());
         }
     }
 }

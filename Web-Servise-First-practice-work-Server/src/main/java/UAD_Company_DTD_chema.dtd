@@ -1,6 +1,7 @@
-<!ELEMENT Company (Company_name, Departments+)>
+<!ELEMENT Company (Company_name, Departments)>
 <!ELEMENT Company_name (#PCDATA)>
-<!ELEMENT Departments (Department_name, Employs)>
+<!ELEMENT Departments (Department+)>
+<!ELEMENT Department (Department_name, Employs)>
 <!ELEMENT Department_name (#PCDATA)>
 <!ELEMENT Employs (Emploee+)>
 <!ELEMENT Emploee (name, Surname, age, position)>

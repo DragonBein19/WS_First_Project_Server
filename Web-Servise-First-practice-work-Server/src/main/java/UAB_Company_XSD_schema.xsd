@@ -1,31 +1,35 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://www.nSalunov.eif.viko.lt"
-            xmlns="http://www.nSalunov.eif.viko.lt"
-            elementFormDefault="qualified">
+<?xml version="1.0" encoding="UTF-8"?>
 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="Company">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="Company_name" type="xs:string"/>
-                <xs:element name="Departments" type="DepartmentsType"/>
+                <xs:element name="Departments" type="Departments_type"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="DepartmentsType">
-        <xs:sequence maxOccurs="unbounded">
+    <xs:complexType name="Departments_type">
+        <xs:sequence>
+            <xs:element name="Department" type="Department_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Department_type">
+        <xs:sequence>
             <xs:element name="Department_name" type="xs:string"/>
-            <xs:element name="Employs" type="EmploysType"/>
+            <xs:element name="Employs" type="Employs_type"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="EmploysType">
-        <xs:sequence maxOccurs="unbounded">
-            <xs:element name="Emploee" type="EmploeeType"/>
+    <xs:complexType name="Employs_type">
+        <xs:sequence>
+            <xs:element name="Emploee" type="Emploee_type" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="EmploeeType">
+    <xs:complexType name="Emploee_type">
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>
             <xs:element name="Surname" type="xs:string"/>
@@ -33,5 +37,4 @@
             <xs:element name="position" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
-
 </xs:schema>

@@ -1,10 +1,46 @@
-<?xml version="1.0"?>
-<!-- DTD validation -->
-<!DOCTYPE Company SYSTEM "UAD_Company_DTD_chema.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD validation
+<!DOCTYPE Company SYSTEM "UAD_Company_DTD_chema.dtd"-->
 
-<Company> <!--xmlns="http://www.nSalunov.eif.viko.lt"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nSalunov.eif.viko.lt UAB_Company_XSD_schema.xsd"-->
+<Company     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             xs:noNamespaceSchemaLocation="UAB_Company_XSD_schema.xsd">
+    <Company_name>IT company</Company_name>
+    <Departments>
+        <Department>
+            <Department_name>Directors</Department_name>
+            <Employs>
+                <Emploee>
+                    <name>John</name>
+                    <Surname>Hock</Surname>
+                    <age>45</age>
+                    <position>General director</position>
+                </Emploee>
+                <Emploee>
+                    <name>Endru</name>
+                    <Surname>Edison</Surname>
+                    <age>44</age>
+                    <position>Director</position>
+                </Emploee>
+            </Employs>
+        </Department>
+        <Department>
+            <Department_name>Analitics</Department_name>
+            <Employs>
+                <Emploee>
+                    <name>Elena</name>
+                    <Surname>Skvarnova</Surname>
+                    <age>29</age>
+                    <position>Department director</position>
+                </Emploee>
+            </Employs>
+        </Department>
+    </Departments>
+</Company>
+
+<!--
+<Company    xmlns="http://nSalunov.eif.viko.lt"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+            xsd:schemaLocation="http://nSalunov.eif.viko.lt UAB_Company_XSD_schema.xsd">
     <Company_name>IT company</Company_name>
     <Departments>
         <Department_name>cybersecurity</Department_name>
@@ -33,33 +69,4 @@
         </Employs>
     </Departments>
 </Company>
-
-<!--
-<Company_name>IT company</Company_name>
-    <Departments>
-        <Department_name>cybersecurity</Department_name>
-        <Employs>
-            <Emploee>
-                <name>John</name>
-                <Surname>Edison</Surname>
-                <age>35</age>
-                <position>Senior Programmer</position>
-            </Emploee>
-            <Emploee>
-                <name>Gedeminas</name>
-                <Surname>Sirokovas</Surname>
-                <age>19</age>
-                <position>Junior Programmer</position>
-            </Emploee>
-        </Employs>
-        <Department_name>Analytics</Department_name>
-        <Employs>
-            <Emploee>
-                <name>Abram</name>
-                <Surname>Huston</Surname>
-                <age>27</age>
-                <position>Middle programmer</position>
-            </Emploee>
-        </Employs>
-    </Departments>
 -->
