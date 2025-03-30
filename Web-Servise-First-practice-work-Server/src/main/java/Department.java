@@ -1,12 +1,15 @@
 import jakarta.xml.bind.annotation.*;
 
+import java.io.Serializable;
 import java.util.List;
 
-@XmlType(propOrder = {"Department_name", "Employs"} )
+@XmlType(propOrder = {"Department_name", "Employs"})
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Department {
+public class Department implements Serializable {
+
     @XmlElement(name = "Department_name")
     private String Department_name;
+
     @XmlElementWrapper(name = "Employs")
     @XmlElement(name = "Emploee")
     private List<Emploee> Employs;

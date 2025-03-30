@@ -1,6 +1,5 @@
 import java.io.Serializable;
 import java.util.List;
-
 import jakarta.xml.bind.annotation.*;
 
 @XmlType(propOrder = {"Company_name", "Departments"} )
